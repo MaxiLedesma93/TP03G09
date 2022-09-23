@@ -13,18 +13,36 @@ import java.util.HashMap;
  * @author maxim
  */
 public class DirectorioTelefonico {
-    HashMap<Long,Cliente> agendaClientes= new HashMap();
+    HashMap<String,Cliente> directorio = new HashMap();
     
-    public void agregarCliente(Long nroTelefono,Cliente cliente){
-        agendaClientes.put(nroTelefono, cliente);
+    public boolean agregarCliente(String telefono, Cliente cliente){
+        if( !directorio.containsKey(cliente) ){
+            directorio.put(telefono, cliente);
+            return true;
+        } else {
+            return false;
+        }
+    }
     
+    public Cliente buscarCliente(String telefono){
+        return directorio.get(telefono);
     }
-    public Cliente buscarCliente(Long nroTelefono){
-        return agendaClientes.get(nroTelefono);
+    
+    public Cliente buscarTelefono(String apellido){
+        return directorio.get(apellido);
     }
+    
     public ArrayList buscarClientes(String apellido){
-        ArrayList lista= new ArrayList();
-        
+        ArrayList lista = new ArrayList();
         return lista;
+    }
+    
+    public boolean borrarCliente(String telefono){
+        if( directorio.containsKey(telefono) ){
+            directorio.remove(telefono);
+            return true;
+        } else {
+            return false;   
+        }
     }
 }

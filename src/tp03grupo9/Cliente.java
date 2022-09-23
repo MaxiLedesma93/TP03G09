@@ -5,6 +5,8 @@
  */
 package tp03grupo9;
 
+import java.util.Objects;
+
 /**
  *
  * @author maxim
@@ -12,7 +14,7 @@ package tp03grupo9;
 public class Cliente {
     private String nombre;
     private String apellido;
-    private Long dni;
+    private String dni;
     private String ciudad;
     private String direccion;
 
@@ -32,11 +34,11 @@ public class Cliente {
         this.apellido = apellido;
     }
 
-    public Long getDni() {
+    public String getDni() {
         return dni;
     }
 
-    public void setDni(Long dni) {
+    public void setDni(String dni) {
         this.dni = dni;
     }
 
@@ -58,11 +60,39 @@ public class Cliente {
 
     public Cliente() {
     }
-    public Cliente(String nombre, String apellido, Long dni, String ciudad, String direccion) {
+    
+    public Cliente(String dni, String apellido, String nombre, String ciudad, String direccion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.ciudad = ciudad;
         this.direccion = direccion;
-    }   
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 37 * hash + Objects.hashCode(this.dni);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Cliente other = (Cliente) obj;
+        if (!Objects.equals(this.dni, other.dni)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
 }

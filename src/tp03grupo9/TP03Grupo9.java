@@ -7,7 +7,6 @@ package tp03grupo9;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
@@ -44,11 +43,14 @@ public class TP03Grupo9 {
                     //c = new Ccliente(sc.next(), sc.next(), sc.next(), sc.next(), sc.next());
                     dt.agregarCliente("2664123456", new Cliente("40123456", "Messi", "Lionel", "San Luis", "Calle 123"));
                     dt.agregarCliente("2664234567", new Cliente("40234567", "De Paul", "Rodrigo", "San Luis", "Calle 567"));
+                    dt.agregarCliente("2664234568", new Cliente("40234568", "Armani", "Franco", "San Luis", "Calle 567"));
+                    dt.agregarCliente("2664234569", new Cliente("40234569", "Martinez", "Lautaro", "San Luis", "Calle 567"));
+                    dt.agregarCliente("2664234560", new Cliente("40234560", "Martinez", "Emiliano", "San Luis", "Calle 567"));
                     break;
                 case 2:
                     System.out.println("Ingrese un telefono a buscar");
                     Cliente cliente = dt.buscarCliente(sc.next());
-                    System.out.println(cliente.toString());
+                    JOptionPane.showMessageDialog(null, cliente.getDni()+ " " + cliente.getApellido()+ " " + cliente.getNombre());
                     break;
                 case 3:
                     System.out.println("Ingrese un apellido a buscar");

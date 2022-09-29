@@ -5,6 +5,8 @@
  */
 package tp03grupo9;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author PUESTO-A1
@@ -189,12 +191,16 @@ public class friBuscarCliente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_tfTelefonoActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+       try{
         Cliente cliente = TP03Grupo9.dt.buscarCliente(tfTelefono.getText());
         tfDni.setText(cliente.getDni());
         tfApellido.setText(cliente.getApellido());
         tfNombre.setText(cliente.getNombre());
         tfCiudad.setText(cliente.getCiudad());
         tfDireccion.setText(cliente.getDireccion());
+       }catch (NullPointerException ex){
+           JOptionPane.showMessageDialog(null, "El cliente no existe");
+       }
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void tfDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfDireccionActionPerformed

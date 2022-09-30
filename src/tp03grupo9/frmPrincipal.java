@@ -38,7 +38,6 @@ public class frmPrincipal extends javax.swing.JFrame {
         mniCrear = new javax.swing.JMenuItem();
         mniBuscar = new javax.swing.JMenuItem();
         mniEliminar = new javax.swing.JMenuItem();
-        mnuSalir = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 600));
@@ -49,11 +48,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         dpEscritorio.setLayout(dpEscritorioLayout);
         dpEscritorioLayout.setHorizontalGroup(
             dpEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         dpEscritorioLayout.setVerticalGroup(
             dpEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGap(0, 579, Short.MAX_VALUE)
         );
 
         mnuAgenda.setText("Agenda");
@@ -91,9 +90,6 @@ public class frmPrincipal extends javax.swing.JFrame {
         mnuAgenda.add(mniEliminar);
 
         mnbOpciones.add(mnuAgenda);
-
-        mnuSalir.setText("Salir");
-        mnbOpciones.add(mnuSalir);
 
         setJMenuBar(mnbOpciones);
 
@@ -189,6 +185,5 @@ public class frmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem mniEliminar;
     private javax.swing.JMenuItem mniListar;
     private javax.swing.JMenu mnuAgenda;
-    private javax.swing.JMenu mnuSalir;
     // End of variables declaration//GEN-END:variables
 }

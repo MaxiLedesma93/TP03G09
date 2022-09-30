@@ -107,7 +107,7 @@ public class friBuscarCliente extends javax.swing.JInternalFrame {
         tfCiudad.setPreferredSize(new java.awt.Dimension(200, 25));
 
         btnSalir.setLabel("Salir");
-        btnSalir.setPreferredSize(new java.awt.Dimension(75, 30));
+        btnSalir.setPreferredSize(new java.awt.Dimension(100, 30));
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
@@ -163,7 +163,7 @@ public class friBuscarCliente extends javax.swing.JInternalFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 

@@ -98,7 +98,7 @@ public class friEliminarCliente extends javax.swing.JInternalFrame {
         tfTelefono.setPreferredSize(new java.awt.Dimension(150, 25));
 
         btnSalir.setLabel("Salir");
-        btnSalir.setPreferredSize(new java.awt.Dimension(74, 30));
+        btnSalir.setPreferredSize(new java.awt.Dimension(100, 30));
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
@@ -114,7 +114,7 @@ public class friEliminarCliente extends javax.swing.JInternalFrame {
         });
 
         btnEliminar.setText("Borrar");
-        btnEliminar.setPreferredSize(new java.awt.Dimension(74, 30));
+        btnEliminar.setPreferredSize(new java.awt.Dimension(100, 30));
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
@@ -167,9 +167,9 @@ public class friEliminarCliente extends javax.swing.JInternalFrame {
                         .addGap(0, 51, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 

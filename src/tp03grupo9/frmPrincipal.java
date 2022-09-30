@@ -135,17 +135,12 @@ public class frmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_mniEliminarActionPerformed
 
     private void mniListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniListarActionPerformed
-        String cadena = null;
-        cadena = "<============================>\n";
-        cadena += "Agenda de clientes\n";
-        Iterator it = TP03Grupo9.dt.directorio.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry e = (Map.Entry)it.next();
-            Cliente cli = ((Cliente)e.getValue());
-            cadena += e.getKey() + " " + cli.getApellido()+ " " + cli.getNombre() +"\n";
-        }
-        cadena += "<============================>\n";
-        JOptionPane.showMessageDialog(this, cadena);
+        dpEscritorio.removeAll();
+        dpEscritorio.repaint();
+        friListarClientes formListarClientes = new friListarClientes();
+        formListarClientes.setVisible(true);
+        dpEscritorio.add(formListarClientes);
+        dpEscritorio.moveToFront(formListarClientes);
     }//GEN-LAST:event_mniListarActionPerformed
 
     /**

@@ -12,6 +12,10 @@ package tp03grupo9;
 public class TP03Grupo9 {
 
     static DirectorioTelefonico dt = new DirectorioTelefonico();
+
+    public static DirectorioTelefonico getDt() {
+        return dt;
+    }
     /**
      * @param args the command line arguments
      */

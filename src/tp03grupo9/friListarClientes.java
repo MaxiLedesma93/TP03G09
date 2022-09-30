@@ -93,7 +93,6 @@ public class friListarClientes extends javax.swing.JInternalFrame {
     // End of variables declaration//GEN-END:variables
 
     private void llenarTabla(){
-        String cadena = null;
         int i = 0;
         Iterator it = TP03Grupo9.getDt().directorio.entrySet().iterator();
         while (it.hasNext()) {

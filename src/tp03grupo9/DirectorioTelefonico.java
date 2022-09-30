@@ -7,6 +7,8 @@ package tp03grupo9;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  *
@@ -28,12 +30,29 @@ public class DirectorioTelefonico {
         return directorio.get(telefono);
     }
     
-    public Cliente buscarTelefono(String apellido){
-        return directorio.get(apellido);
+    public ArrayList buscarTelefono(String apellido){
+        Iterator it = TP03Grupo9.getDt().directorio.entrySet().iterator();
+        ArrayList<String> lista = new ArrayList();
+        while (it.hasNext()) {
+            Map.Entry e = (Map.Entry)it.next();
+            Cliente cli = ((Cliente)e.getValue());
+            if( cli.getApellido().equals((String)apellido)){
+                lista.add(e.getKey().toString());
+            }
+        }
+        return lista;
     }
     
-    public ArrayList buscarClientes(String apellido){
-        ArrayList lista = new ArrayList();
+    public ArrayList buscarClientes(String ciudad){
+        Iterator it = TP03Grupo9.getDt().directorio.entrySet().iterator();
+        ArrayList<Cliente> lista = new ArrayList();
+        while (it.hasNext()) {
+            Map.Entry e = (Map.Entry)it.next();
+            Cliente cli = ((Cliente)e.getValue());
+            if( cli.getCiudad().equals((String)ciudad)){
+                lista.add(cli);
+            }
+        }
         return lista;
     }
     
